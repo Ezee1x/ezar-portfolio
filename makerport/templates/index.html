@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ezar Sadeque | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+
+  <body>
+    <!-- Desktop Nav -->
+    <nav id="desktop-nav">
+      <div class="logo">Ezar Sadeque's Portfolio</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+         
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <nav id="hamburger-nav">
+      <div class="logo">Ezar Sadeque</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+         
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== Two-column hero (Profile LEFT, About RIGHT) ===== -->
+    <div class="hero-grid">
+      <!-- PROFILE (left column) -->
+      <section id="profile">
+        <div class="section__pic-container">
+          <!-- use your actual filename; screenshot shows ezar.jpg -->
+          <img src="/static/EZARPRO.jpg" alt="Ezar's profile picture" />
+        </div>
+
+        <div class="section__text">
+          <p class="section__text__p1">Hi! I’m</p>
+          <h1 class="title">Ezar Sadeque</h1>
+          
+
+          <div class="cta-row">
+  <!-- Contact Me button -->
+ <div class="contact1">
+  <p style="color:#000; font-weight:700; margin:0">Contact Me</p>
+</div>
+
+  <!-- the little pointing graphic -->
+  <img src="/static/pointer.png" alt="" class="pointer-mark" />
+
+  <div class="socials">
+  <a href="#contact" class="icon-link" aria-label="Go to Contact">
+    <img src="/static/linkedin.png" alt="LinkedIn" class="icon" />
+  </a>
+
+  <a href="#contact" class="icon-link" aria-label="Go to Contact">
+    <img src="/static/email.png" alt="Email" class="icon" />
+  </a>
+</div>
+
+
+
+
+      </section>
+
+      <!-- ABOUT (right column) -->
+      <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+
+    <p>    </p>
+
+            <div class="text-container">
+              <p>
+                Hello! I'm Ezar Sadeque, an aspiring engineer with a passion for creating innovative solutions. I'm based in Brooklyn, New York: attending The Packer Collegiate Institute.
+
+                  Please feel free to see my projects below!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- ===== /hero-grid ===== -->
+
+  <!-- PROJECTS -->
+<section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+
+      <!-- Project 1 -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="/static/SLight-base.JPG" alt="Project 1" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">Modular Solar Charging & Reading Light</h2>
+        <div class="btn-container">
+          
+          <button class="btn btn-color-2 project-btn" data-modal-target="#modal-project-1">More details</button>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="/static/FTC2024.jpg" alt="Project 2" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">FTC 2024 Competition Robot</h2>
+        <div class="btn-container">
+          
+          <button class="btn btn-color-2 project-btn" data-modal-target="#modal-project-2">More details</button>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="/static/GROUPPHOTO.jpg" alt="Project 3" class="project-img" />
+        </div>
+        <h2 class="experience-sub-title project-title">FTC 2023 Competition Robot</h2>
+        <div class="btn-container">
+          
+          <button class="btn btn-color-2 project-btn" data-modal-target="#modal-project-3">More details</button>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+<div class="details-container color-container">
+  <div class="article-container">
+    <img src="/static/rad1.png" alt="Transformer radiator" class="project-img" />
+  </div>
+  <h2 class="experience-sub-title project-title">Radiator Drawing</h2>
+  <div class="btn-container">
+    <button class="btn btn-color-2 project-btn" data-modal-target="#modal-project-4">More details</button>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="/static/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:ezsadeque@packer.edu">ezsadeque@packer.edu</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="/static/linkedin.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:ezsadeque@packer.edu">Ezar Sadeque</a></p>
+        </div>
+        
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Ezar Sadeque. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    <!-- ===== Modals ===== -->
+<div class="modal" id="modal-project-1" aria-hidden="true" role="dialog" aria-labelledby="m1-title">
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__dialog" role="document">
+    <button class="modal__close" aria-label="Close" data-close-modal>&times;</button>
+    <h2 id="m1-title"> Solar Powered Lamp and USB Charger </h2>
+
+    <div class="modal__body">
+      <!-- side-by-side hero: prototype vs final -->
+<div class="hero-duo">
+  <figure class="media-card is-hero" data-version="prototype">
+    <img src="/static/ogSL.png" alt="Early prototype of the solar study light">
+    
+  </figure>
+
+  <figure class="media-card is-hero" data-version="final">
+    <img src="/static/SLon.png" alt="Final solar study light">
+  
+  </figure>
+</div>
+
+      <!-- ========== SOLAR LIGHT: MODAL CONTENT (PDF-aligned) ========== -->
+
+<p class="legend-note">
+  
+</p>
+
+<h4 class="centered-title">Why This Project?</h4>
+
+<p>
+  Education is an extremely important component of personal and community development, but unfortunately, rural areas are often limited by unreliable power.
+ To help address this challenge, I developed a solar-powered reading light and USB charger to provide students with a dependable source of illumination for studying after dark.
+
+</p>
+
+<h4 class="centered-title">Project Overview</h4>
+<p>
+  A solar panel (8 W or 12 W) charges a Li-ion battery pack inside a rectangular base. Power
+  is managed by a USB controller, then boosted/regulated to drive high-output LEDs and provide
+  5 V USB charging on two ports. Two push buttons control the lamp heads. An articulated,
+  spring-loaded arm lets you aim the beam precisely over a desk.
+</p>
+
+<!-- Specs from the PDF -->
+<div class="spec-grid">
+  <div>
+    <h5>Base & Layout</h5>
+    <ul>
+      <li>Rectangular base, plain-sheet construction (black)</li>
+      <li>Dimensions: 8″ (W) × 7″ (L) × 4″ (H)</li>
+      <li>Centered adjustable light stand</li>
+    </ul>
+  </div>
+  <div>
+    <h5>Power & Battery</h5>
+    <ul>
+      <li>Li-ion pack: 4 × 3.7 V cells (≈ 8000 mAh total)</li>
+      <li>USB power/charge controller inside base</li>
+      <li>Two 5 V USB output ports for phones/power banks</li>
+    </ul>
+  </div>
+  <div>
+    <h5>Solar & Performance</h5>
+    <ul>
+      <li>Panels: 8 W or 12 W compatible</li>
+      <li>12 W panel: 9.5″ × 12.5″, ~5.2 V, up to 1.8 A</li>
+      <li>Charge time ≈ 2 h in direct sun (typ.)</li>
+      <li>Run time (8 W panel): ~3 h (one LED) / ~1.5 h (two LEDs)</li>
+    </ul>
+  </div>
+  <div>
+    <h5>Lighting & Controls</h5>
+    <ul>
+      <li>Two high-power LEDs (10 W each)</li>
+      <li>Two on/off push buttons on the top face</li>
+      <li>Articulated spring-loaded desk arm for aiming</li>
+    </ul>
+  </div>
+</div>
+
+<h4>Design Process</h4>
+
+<!-- Parts / hero image -->
+<figure class="media-card" data-version="final">
+  <img src="/static/parts.png" alt="All parts laid out: cells, controller, wiring, LEDs, arm, hardware" />
+  <figcaption><span class="chip chip--final">Final</span>
+    Parts spread: 4× Li-ion cells, USB charge/power controller, wiring harness, two LEDs,
+    articulated arm, enclosure hardware, solar panel and leads.
+  </figcaption>
+</figure>
+
+<!-- Final build gallery -->
+<div class="media-grid">
+  <figure class="media-card" data-version="final">
+    <img src="/static/insideSL.png" alt="Inside the base: pack, controller, ports, wiring" />
+    <figcaption><span class="chip chip--final">Final</span>
+      Internal layout with pack, controller, dual USB ports, and serviceable wiring.
+    </figcaption>
+  </figure>
+
+  <figure class="media-card" data-version="final">
+    <img src="/static/frontviewSL.jpeg" alt="Front view of the lamp with articulated arm" />
+    <figcaption><span class="chip chip--final">Final</span>
+      Front view: articulated arm and dual lamp heads with diffuser.
+    </figcaption>
+  </figure>
+
+  <figure class="media-card" data-version="final">
+    <img src="/static/sideviewSL.png" alt="Side view showing switches and ventilation" />
+    <figcaption><span class="chip chip--final">Final</span>
+      Side view: two push-button switches on top and ventilation along the base.
+    </figcaption>
+  </figure>
+
+  <figure class="media-card" data-version="final">
+    <img src="/static/SLon.png" alt="Lamp on: even desk illumination" />
+    <figcaption><span class="chip chip--final">Final</span>
+      Powered on — stable, even illumination for reading.
+    </figcaption>
+  </figure>
+</div>
+<h4 class="centered-title">Impact</h4>
+
+<section class="impact-block">
+
+
+  <!-- Photo pair -->
+  <div class="hero-duo">
+    <figure class="media-card is-hero">
+      <img
+        src="/static/impact1.JPG"
+        alt="Two siblings studying at night under a small solar-powered LED lamp; notebooks open."
+        loading="lazy"
+      />
+      <figcaption class="centered-title">
+        Shanaj (11) and Topon (9) studying together
+      </figcaption>
+    </figure>
+
+    <figure class="media-card is-hero">
+      <img
+        src="/static/impact2.JPG"
+        alt="Child reading in bed with adjustable LED lamp; portable battery visible."
+        loading="lazy"
+      />
+      <figcaption class="centered-title">
+        Shanaj reading in bed with focused, glare-free light
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- One-sentence “why it matters” -->
+  <p class="centered-title">
+    With two hours in the sun, the solar lamp offers 3 hours with a single LED on and 1.5 hours when both LED lights are activated. Currently has been distrbuted to two siblings, and in the works of finding investors to manufactor more lamps for rural schools in Valuka, Bangladesh.
+  </p>
+
+  
+</section>
+
+<!-- /PDF-aligned content -->
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="modal-project-2" aria-hidden="true" role="dialog" aria-labelledby="m2-title">
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__dialog" role="document">
+    <button class="modal__close" aria-label="Close" data-close-modal>&times;</button>
+    <h2 id="m2-title">FTC 2024 Competition Robot</h2>
+    <div class="modal__body">
+      <!-- ========== MODAL 2: FTC ROBOT (MECANUM + INTAKE/OUTTAKE) ========== -->
+
+<!-- single hero: team + robot group photo -->
+<figure class="media-card is-hero">
+  <img src="/static/FTC2024.jpg" alt="Team 14156 with FTC robot (mecanum drivetrain)">
+  <p class="centered-title">FTC Robot (Team 14156) — Mecanum drivetrain, intake + outake</p>
+</figure>
+
+<!-- WHY THIS PROJECT -->
+<h3 class="centered-title">Why this project</h3>
+<p>
+  For the 2024–25 season, 2024 FTC's "Into The Deep" game challenged robots to collect and score
+  small "pixels" into high baskets and ascend a central structure. As lead designer for Team 14156,
+  I developed a mecanum-drive robot with a vertical roller intake, bucket outtake, and dual linear slides
+  to reach the high basket and climb the structure. The design focused on repeatable scoring cycles and
+  reliable endgame ascent.
+
+</p>
+
+<!-- DESIGN PROCESS (mirrors your PDF sections) -->
+<h3 class = "centered-title">Design process</h3>
+
+<!-- Chassis -->
+<h4 class="centered-title">Chassis</h4>
+<p>
+  We chose a square goBILDA frame for packaging and serviceability, then modified members
+  for slide clearance and an auxiliary motor mount for the collection linkage.
+</p>
+<figure class="media-card">
+  <img src="/static/chasis.jpg" alt="Square goBILDA chassis with mecanum wheels and motor mounts">
+  <figcaption>Square chassis + 4 mecanum wheels for strafing and precise alignment to the basket.</figcaption>
+</figure>
+
+<!-- Linear Slides -->
+<h4 class="centered-title">Linear slides</h4>
+<p>
+  Two independent slide motors raise a cross-hopper. Early on, uneven rise skewed the hopper and
+  changed the outtake angle. I planned encoder-sync and strengthened mounts where space allowed.
+</p>
+<figure class="media-card">
+  <img src="/static/linearslides.png" alt="Dual linear slides with cross-hopper">
+  <figcaption>Dual slides with cross-hopper; alignment is critical for consistent dumps.</figcaption>
+</figure>
+
+
+
+
+<!-- Spools (initial → final) -->
+<h4 class="centered-title">Spools</h4>
+<p>
+  <strong>Initial issue:</strong> Narrow spools let the string wander and slip onto the axle.<br>
+  <strong>Update:</strong> Widened the spool and added a center rim to split up/down runs and prevent crossovers.
+</p>
+<!-- Two photos side by side -->
+<div class="image-row">
+  <figure class="img-cell">
+    <img src="/static/initalspool.png" alt="Initial Design">
+  </figure>
+  <figure class="img-cell">
+    <img src="/static/finalspool.png" alt="Latest Design">
+  </figure>
+</div>
+
+
+<!-- Hooks -->
+<h4 class="centered-title">Hooks (ascent)</h4>
+<p>
+  I slanted the hook geometry to increase tolerance during lining up to the rung.
+  The profile reduces “perfect hit” requirements and speeds driver handoff into the climb.
+</p>
+<!-- Two photos side by side -->
+<div class="image-row">
+  <figure class="img-cell">
+    <img src="/static/initalhook.png" alt="Initial Design">
+  </figure>
+  <figure class="img-cell">
+    <img src="/static/finalhook.png" alt="Latest Design">
+  </figure>
+</div>
+
+<!-- Final 3D designs (4 images) -->
+<h5 class="centered-title">Final 3D designs (key assemblies)</h5>
+<!-- 2x2 Photo Grid -->
+<div class="gallery-2x2">
+  <figure class="gallery-item">
+    <img src="/static/design1.png" alt="View 1">
+  </figure>
+  <figure class="gallery-item">
+    <img src="/static/design2.png" alt="View 2">
+  </figure>
+  <figure class="gallery-item">
+    <img src="/static/design3.png" alt="View 3">
+  </figure>
+  <figure class="gallery-item">
+    <img src="/static/design4.png" alt="View 4">
+  </figure>
+</div>
+
+<!-- Results / Process takeaway -->
+<h3 class="centered-title">What I learned</h3>
+<ul class="bulleted">
+  <li>Syncing dual actuators (even just with sensors + guard rails) prevents cascading skew issues.</li>
+  <li>Routing + labeling saves matches: two-color lines, idlers, and clear tie-offs cut pit time.</li>
+  <li>Designing for the game meta (high basket + high ascent) focuses effort where points matter.</li>
+</ul>
+
+
+<!-- /MODAL 2: FTC ROBOT -->
+
+
+    </div>
+  </div>
+</div>
+<div class="modal" id="modal-project-3" aria-hidden="true" role="dialog" aria-labelledby="m3-title">
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__dialog" role="document">
+    <button class="modal__close" aria-label="Close" data-close-modal>&times;</button>
+    <h2 id="m3-title">FTC Team 14156 — Season Portfolio Highlights</h2>
+
+    <div class="modal__body">
+      <!-- HERO -->
+      <figure class="media-card is-hero">
+        <img src="/static/FTC2023FINAL2.png" alt="FTC Team 14156 robot with rectangular mecanum chassis">
+        <figcaption class="centered-title">Rectangular mecanum chassis + intake → outtake → linear slides</figcaption>
+      </figure>
+
+      <!-- WHY / OVERVIEW -->
+      <h3 class="centered-title">Why this project</h3>
+      <p>
+        As Team 14156 scaled up from a finalist-alliance season to Super-Qualifiers, we rebuilt our process:
+        plan earlier, CAD end-to-end, and design for repeatable scoring. The portfolio captures that shift:
+        from whiteboard sketches to Fusion 360 assemblies, 3D-printed parts, and a drivetrain + manipulator
+        package tuned for consistent cycles and endgame execution. 
+      </p>
+
+
+
+      <!-- INTAKE-->
+      <h3 class="centered-title">Intake</h3>
+<p>
+  After evaluating a claw concept, the team adopted a <strong>vertical roller intake</strong> with custom flexible flaps—stiffer than
+        surgical tubing for better force transfer. Iterated from two-end to three-end flap geometry. 
+      </p>
+
+      <div class="image-row">
+        <figure class="img-cell">
+          <img src="/static/BLADEDRAWING.jpg" alt="Roller intake with early flap design">
+        </figure>
+        <figure class="img-cell">
+          <img src="/static/BLADE.png" alt="Updated flap design with improved stiffness">
+        </figure>
+      </div>
+
+      <!-- Outtake -->
+      <h4 class="centered-title">Outtake</h4>
+      <p>
+        Simple, reliable <strong>bucket outtake</strong> with a small roller to transfer pixels from the ramp into the bucket—then a quick flip
+        to score on the backdrop. Roller isn’t strictly required but boosts consistency.
+      </p>
+      <figure class="media-card">
+        <img src="/static/BUCKET.png" alt="Bucket outtake mounted above the transfer path">
+       
+        <figcaption>Bucket + helper roller for controlled handoff and clean dumps. (placeholder image)</figcaption>
+      </figure>
+
+      <!-- Slides -->
+      <h4 class="centered-title">Linear Slides</h4>
+      <p>
+        Switched from prior REV slides to <strong>Misumi linear rails</strong> for speed and weight savings; upgraded to durable
+        <strong>Kevlar string</strong> to prevent fray. Ensured mounts were stiff and motion smooth across travel. 
+      </p>
+      <div class="image-row">
+        <figure class="img-cell">
+          <img src="/static/MISUMISLIDE.png" alt="Misumi linear rails on side plates">
+        </figure>
+        <figure class="img-cell">
+          <img src="/static/misumi2.png" alt="Kevlar string routing and anchors">
+        </figure>
+      </div>
+
+      <!-- Side Plates -->
+      <h4 class="centered-title">Side Plates</h4>
+      <figure class="img-cell">
+          <img src="/static/SIDEPANEL.png" alt="Kevlar string routing and anchors">
+        </figure>
+      <p>
+        CNC-cut <strong>polycarbonate side plates</strong> provide rigid mounting for slides and electronics (REV Hubs),
+        solving last year’s packaging pain points.
+      </p>
+
+      <!-- Drone -->
+      <h4 class="centered-title">Drone Launcher</h4>
+      <div class="image-row">
+        <figure class="img-cell">
+          <img src="/static/DRONEDRAWINGS.png" alt="Misumi linear rails on side plates">
+        </figure>
+        <figure class="img-cell">
+          <img src="/static/DRONELAUNCHER.png" alt="Kevlar string routing and anchors">
+        </figure>
+      </div>
+      <p>
+        Onboard endgame launcher: rubber-band energy, servo release, whiteboard → CAD → 3D-print pipeline.
+        Smooth on-ramp for skill-building and collaboration.
+      </p>
+
+      <!-- PROCESS -->
+      <h3 class="centered-title">Build Process & Materials</h3>
+      <ul class="bulleted">
+        <li><strong>CAD-first:</strong> Full Fusion 360 robot model; more up-front reviews to reduce rushed late-build time. </li>
+        <li><strong>3D-printing choices:</strong> Polycarbonate for load-bearing parts; PETG/ASA for non-critical; Filaflex (82A) for flexible intake flaps.</li>
+      </ul>
+
+      <!-- PROGRAMMING -->
+      <h3 class="centered-title">Programming Stack</h3>
+      <ul class="bulleted">
+        <li><strong>Android Studio + GitHub</strong> for collaborative dev and version control.</li>
+        <li><strong>Road Runner</strong> for autonomous pathing + localization; <strong>Dashboard</strong> for real-time telemetry.</li>
+        <li><strong>Computer Vision:</strong> Built on the FTC SDK opmode and adapted for team needs.</li>
+      </ul>
+
+      
+
+      <!-- RESULTS / TAKEAWAYS -->
+      <h3 class="centered-title">Season Takeaways</h3>
+      <ul class="kpi-chips" aria-label="Key outcomes">
+        <li>Advanced to Super-Qualifiers</li>
+        <li>End-to-end CAD pipeline</li>
+        <li>Faster, lighter slides</li>
+        <li>More reliable cycles</li>
+      </ul>
+      <ul class="bulleted">
+        <li>Front-load planning & CAD to avoid build crunch.</li>
+        <li>Design transfer paths to keep game pieces controlled end-to-end.</li>
+        <li>Choose materials by role: polycarb for structure, flexible filaments for intake compliance.</li>
+        <li>Use shared tools (GitHub, Dashboard) to speed debug and driver iteration.</li>
+      </ul>
+
+      <!-- GALLERY (optional placeholders) -->
+      
+      <div>
+          <img src="/static/FTC2023FINAL2.png" alt="final robot image" class="gallery-img" />
+      </div>
+
+   
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-project-4" aria-hidden="true" role="dialog" aria-labelledby="m4-title">
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__dialog" role="document">
+    <button class="modal__close" aria-label="Close" data-close-modal>&times;</button>
+    <h2 id="m4-title">Reverie Engineering Internship — Transformer Radiator (ONAN)</h2>
+
+    <div class="modal__body">
+      <!-- Single HERO image -->
+      <figure class="media-card is-hero">
+        <img src="/static/rad1.png" alt="Radiator assembly drawing for a power transformer">
+        <figcaption class="centered-title">Radiator bank drawing — finned heat exchanger for ONAN cooling</figcaption>
+      </figure>
+
+      <!-- WHY THIS PROJECT -->
+      <h3 class="centered-title">Why this project</h3>
+      <p>
+        At Reverie Power &amp; Automation Engineering Ltd., I produced a fabrication-ready radiator drawing for a power
+        transformer. The goal: convert specs into a clean, buildable layout with correct fin count, flange geometry, and
+        service features—so a shop can manufacture, assemble, and maintain the radiator bank with zero ambiguity.
+      </p>
+
+      <!-- CALC HIGHLIGHT -->
+      <h4 class="centered-title">Quick heat check</h4>
+      <div class="calc-card">
+        <pre><code>Heat per fin           = 275 W
+Fins per radiator      = 20
+Number of radiators    = 8
+Total fins             = 20 × 8 = 160
+Total dissipation      = 160 × 275 = <strong>44,000 W</strong></code></pre>
+        <p class="legend-note">Back-of-envelope capacity check to sanity-check fin count vs. cooling requirement.</p>
+      </div>
+
+      <!-- WHAT I LEARNED -->
+      <h3 class="centered-title">What I learned</h3>
+      <ul class="bulleted">
+        <li><strong>Spec → shop floor:</strong> turn client notes into unambiguous dims, weld notes, and a BOM that fabricators trust.</li>
+        <li><strong>Cooling logic:</strong> how fin area, oil path, and air side ΔT set the radiator’s effective heat transfer.</li>
+        <li><strong>Tolerancing &amp; assembly:</strong> flange PCD/slots for alignment; lifting points placed for safe rigging.</li>
+        <li><strong>Serviceability:</strong> valve/oil-cock &amp; clearance placement so a single radiator can be isolated and swapped.</li>
+      </ul>
+
+      <!-- MINI PRIMER -->
+      <h3 class="centered-title">Transformer cooling—ONAN in one minute</h3>
+      <p>
+        Losses heat the oil. In <strong>ONAN</strong> (Oil-Natural/Air-Natural), hot oil rises through headers into finned radiators,
+        sheds heat to ambient air by natural convection, and sinks back cooler. Radiator design balances fin area,
+        airflow (natural here), oil velocity, and pressure drop—so the tank stays within temperature rise limits.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </body>
+</html>

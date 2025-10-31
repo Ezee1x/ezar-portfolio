@@ -1,0 +1,581 @@
+/* ===== Base ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: "Poppins", sans-serif; }
+p { color: rgb(85,85,85); }
+a, .btn { transition: all 300ms ease; }
+
+/* ===== Nav ===== */
+nav, .nav-links { display: flex; }
+nav { justify-content: space-around; align-items: center; height: 17vh; }
+.nav-links { gap: 2rem; list-style: none; font-size: 1.5rem; }
+a { color: black; text-decoration: none; text-decoration-color: white; }
+a:hover { color: grey; text-decoration: underline; text-underline-offset: 1rem; text-decoration-color: rgb(181,181,181); }
+.logo { font-size: 2rem; }
+.logo:hover { cursor: default; }
+
+/* ===== Hamburger ===== */
+#hamburger-nav { display: none; }
+.hamburger-menu { position: relative; display: inline-block; }
+.hamburger-icon { display: flex; flex-direction: column; justify-content: space-between; height: 24px; width: 30px; cursor: pointer; }
+.hamburger-icon span { width: 100%; height: 2px; background-color: black; transition: all 0.3s ease-in-out; }
+.menu-links { position: absolute; top: 100%; right: 0; background-color: white; width: fit-content; max-height: 0; overflow: hidden; transition: all 0.3s ease-in-out; }
+.menu-links a { display: block; padding: 10px; text-align: center; font-size: 1.5rem; color: black; }
+.menu-links li { list-style: none; }
+.menu-links.open { max-height: 300px; }
+.hamburger-icon.open span:first-child { transform: rotate(45deg) translate(10px,5px); }
+.hamburger-icon.open span:nth-child(2) { opacity: 0; }
+.hamburger-icon.open span:last-child { transform: rotate(-45deg) translate(10px,-5px); }
+
+/* ===== Sections (defaults) ===== */
+section { padding-top: 4vh; height: 96vh; margin: 0 10rem; box-sizing: border-box; min-height: fit-content; }
+.section-container { display: flex; }
+
+/* ===== Two-column hero ===== */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr; /* left wider */
+  align-items: center;
+  gap: 4rem;
+  margin: 0 10rem;
+}
+.hero-grid section { height: auto; margin: 0; padding-top: 0; }
+
+/* ===== Profile ===== */
+#profile { display: flex; justify-content: flex-start; align-items: center; gap: 3rem; height: auto; }
+
+.section__pic-container {
+  width: 320px;
+  aspect-ratio: 1 / 1;
+  margin: 0;           /* stop auto-centering */
+  display: flex;
+}
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;               /* rounded-square */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.section__text { align-self: center; text-align: left; }
+.section__text p { font-weight: 600; }
+.section__text__p1 { margin-bottom: 0.25rem; }
+.section__text__p2 { font-size: 1.25rem; margin-top: 0.25rem; }
+.title { font-size: 3rem; line-height: 1.1; }
+
+
+/* ===== contact me shift===== */
+.contact1 { font-size: 1rem; 
+  line-height: 1.1; 
+  margin-bottom: 1rem;
+color: #000;
+
+transform: translateX(-1.9px);
+transform: translateY(7.5px);
+ }
+
+
+/* Buttons */
+.btn-container { display: flex; gap: 1rem; margin-top: 1rem; }
+.btn { font-weight: 600; padding: 1rem; width: 8rem; border-radius: 2rem; }
+.btn-color-1, .btn-color-2 { border: rgb(53,53,53) 0.1rem solid; }
+.btn-color-1:hover, .btn-color-2:hover { cursor: pointer; }
+.btn-color-1, .btn-color-2:hover { background: rgb(53,53,53); color: white; }
+.btn-color-1:hover { background: rgb(0,0,0); }
+.btn-color-2 { background: none; }
+.btn-color-2:hover { border: rgb(255,255,255) 0.1rem solid; }
+
+/* center buttons inside project cards */
+#projects .btn-container {
+  display: flex;            /* already there */
+  gap: 1rem;                /* already there */
+  margin-top: 1rem;         /* already there */
+  justify-content: center;  /* <-- add this */
+}
+
+
+/* ===== About ===== */
+#about { position: relative; }
+.about-containers { gap: 2rem; margin: 2rem 0; display: flex; }
+.about-details-container { justify-content: center; flex-direction: column; display: flex; }
+.about-pic { border-radius: 2rem; }
+.details-container {
+  padding: 1.5rem; flex: 1; background: white; border-radius: 2rem;
+  border: rgb(163,163,163) 0.1rem solid; text-align: center;
+}
+.arrow { position: absolute; right: -5rem; bottom: 2.5rem; }
+.section-container { gap: 4rem; height: 80%; }
+
+/* ===== Experience ===== */
+#experience { position: relative; }
+.experience-sub-title { color: rgb(85,85,85); font-weight: 600; font-size: 1.75rem; margin-bottom: 2rem; }
+.experience-details-container { display: flex; justify-content: center; flex-direction: column; }
+.article-container { display: flex; text-align: initial; flex-wrap: wrap; flex-direction: row; gap: 2.5rem; justify-content: space-around; }
+article { display: flex; width: 10rem; justify-content: space-around; gap: 0.5rem; }
+article .icon { cursor: default; }
+
+/* ===== Projects ===== */
+#projects { position: relative; }
+.color-container { border-color: rgb(163,163,163); background: rgb(250,250,250); }
+.project-img { border-radius: 1rem; width: 90%; height: 90%; }
+.project-title { margin: 1rem; color: black; }
+.project-btn { color: black; border-color: rgb(163,163,163); }
+
+/* ===== Contact ===== */
+#contact { display: flex; justify-content: center; flex-direction: column; height: 70vh; }
+.contact-info-upper-container {
+  display: flex; justify-content: center; border-radius: 2rem;
+  border: rgb(163,163,163) 0.1rem solid; background: rgb(250,250,250);
+  margin: 2rem auto; padding: 0.5rem;
+}
+.contact-info-container { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin: 1rem; }
+.contact-info-container p { font-size: larger; }
+.contact-icon { cursor: default; }
+.email-icon { height: 2.5rem; }
+
+/* ===== Footer ===== */
+footer { height: 26vh; margin: 0 1rem; }
+footer p { text-align: center; }
+
+/* ===== Responsive tweaks ===== */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+  display: flex;
+  justify-content: space-between; /* spreads logo and links */
+  align-items: center;
+  height: 17vh;
+  padding: 0 10rem;               /* nudge right/left equally */
+}
+  #hamburger-nav { display: flex; }
+
+  .hero-grid { display: block; margin: 0 5%; }
+  #profile { margin-bottom: 1rem; }
+
+  #experience, .experience-details-container { margin-top: 2rem; }
+  #profile, .section-container { display: block; }
+  .arrow { display: none; }
+  section, .section-container { height: fit-content; }
+  section { margin: 0 5%; }
+  .section__pic-container { width: 275px; height: auto; margin: 0 auto 2rem; }
+  .about-containers { margin-top: 0; }
+}
+
+@media screen and (max-width: 600px) {
+  #contact, footer { height: 40vh; }
+  article { font-size: 1rem; }
+  footer nav { height: fit-content; margin-bottom: 2rem; }
+  .about-containers, .contact-info-upper-container, .btn-container { flex-wrap: wrap; }
+  .contact-info-container { margin: 0; }
+  .contact-info-container p, .nav-links li a { font-size: 1rem; }
+  .experience-sub-title { font-size: 1.25rem; }
+  .logo { font-size: 1.5rem; }
+  .nav-links { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .section__text__p2 { font-size: 1.25rem; }
+  .title { font-size: 2rem; }
+  .text-container { text-align: justify; }
+}
+
+/* place to the right of the Contact button */
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;               /* space between buttons and the image */
+}
+
+/* the pointing graphic */
+.point-mark {
+  width: 100px;             /* size: adjust 36–56px as you like */
+  height: auto;
+  transform: translateY(30px); /* tiny vertical nudge to line up with buttons */
+  user-select: none;
+  pointer-events: none;    /* clicks pass through to buttons */
+ 
+}
+
+/* optional: hide on smaller screens */
+@media (max-width: 1200px) {
+  .point-mark { display: none; }
+}
+
+/* one-row layout for the CTA */
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;               /* space between button and pointer/socials block */
+}
+
+/* pointer image */
+.pointer-mark {
+  width: 48px;                /* adjust to taste */
+  height: auto;
+  user-select: none;
+
+  transform: translateX(-15px); /* nudge right to balance with socials */
+}
+
+/* two icons exactly side-by-side with an even gap */
+.socials {
+  --icon-size: 34px;          /* control knob: icon size */
+  --icon-gap: 12px;           /* control knob: gap between icons */
+  display: flex;
+  align-items: center;
+  gap: var(--icon-gap);
+
+  transform: trasnlateX(12px); /* nudge right to balance with pointer */
+}
+
+/* icon sizing */
+.socials .icon {
+  width: var(--icon-size);
+  height: auto;
+  cursor: pointer;
+}
+
+/* OPTIONAL: center the pair under the pointer tip.
+   If your pointer tip should sit exactly between the two icons,
+   this nudge shifts the pair left by half their total width so the
+   midpoint lines up under the pointer. Tweak if needed. */
+.socials {
+  transform: translateX(calc(-0.5 * (var(--icon-size) + var(--icon-gap))));
+}
+
+/* OPTIONAL: hide pointer+socials on small screens if crowded */
+@media (max-width: 1200px) {
+  .pointer-mark { display: none; }
+}
+
+/* ===== Modal ===== */
+body.modal-open { overflow: hidden; }          /* prevent page scroll when open */
+
+.modal { 
+  position: fixed; inset: 0; z-index: 9999;
+  display: none;
+}
+
+.modal.open { display: block; }
+
+.modal__backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.modal__dialog {
+  position: relative;
+  width: min(820px, 92vw);
+  max-height: min(80vh, 920px);
+  margin: 6vh auto;                /* centers block */
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+  overflow: hidden;                /* keeps rounded corners */
+}
+
+.modal__close {
+  position: absolute; top: 8px; right: 10px;
+  font-size: 1.75rem; line-height: 1;
+  border: 0; background: transparent; cursor: pointer;
+}
+
+.modal__body {
+  margin-top: 0.75rem;
+  padding-right: 6px;              /* room for scrollbar */
+  overflow: auto;                  /* <-- scrollable content */
+  max-height: calc(80vh - 90px);
+}
+
+@media (max-width: 600px) {
+  .modal__dialog { margin: 4vh auto; padding: 1rem; }
+}
+
+/* square images inside modals */
+.modal__body img {
+  border-radius: 0 !important;
+}
+
+/* ===== Modal media layout ===== */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+@media (max-width: 700px) {
+  .media-grid { grid-template-columns: 1fr; }
+}
+
+.media-card {
+  margin: 0 0 10px 0;
+  position: relative;
+}
+.media-card img,
+.media-card .video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;           /* square corners (override global rounded images) */
+}
+.media-card figcaption {
+  font-size: 0.92rem;
+  color: #444;
+  margin-top: 6px;
+}
+
+/* little “chip” labels */
+.chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.chip--prototype { background: #fff3cd; color: #8a6d3b; border: 1px solid #f1da97; } /* amber */
+.chip--final      { background: #e8f5e9; color: #1b5e20; border: 1px solid #b6e0b8; } /* green */
+
+.legend-note { margin: 4px 0 10px; color: #666; font-size: 0.9rem; }
+
+/* make single images in modal look consistent with grid items */
+.modal__body img { border-radius: 0; }
+.video { background: #000; border-radius: 0; }
+
+/* two-up hero at the top of the modal */
+.hero-duo{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+  margin: 0 0 10px 0;
+}
+
+/* make both hero images a consistent window *//* === Two-up hero at the top of the modal === */
+.hero-duo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0 0 10px 0;
+}
+
+/* Show the ENTIRE image inside a consistent frame (no cropping) */
+.hero-duo .is-hero img{
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* consistent box */
+  object-fit: contain;    /* <-- show whole image */
+  background: #f2f2f2;    /* subtle letterbox behind image */
+  border-radius: 0;       /* square corners to match modal */
+  display: block;
+}
+
+/* Optional: overlay version chips (Prototype/Final) */
+.is-hero[data-version]{
+  position: relative;     /* needed for the ::before badge */
+}
+.is-hero[data-version]::before{
+  content: attr(data-version);
+  text-transform: capitalize;
+  position: absolute; top: 8px; left: 8px;
+  padding: 2px 8px; border-radius: 999px;
+  font-size: .78rem; font-weight: 700; line-height: 1.4;
+  background: #e8f5e9; color: #1b5e20; border: 1px solid #b6e0b8; /* Final */
+}
+.is-hero[data-version="prototype"]::before{
+  background: #fff3cd; color: #8a6d3b; border: 1px solid #f1da97; /* Prototype */
+}
+
+@media (max-width: 700px){
+  .hero-duo{ grid-template-columns: 1fr; }
+}
+
+/* center just the "Why This Project?" heading */
+.modal__body .centered-title{
+  text-align: center;
+  margin: 10px 0 6px;   /* tweak spacing as you like */
+}
+/* Container */
+.impact-block { max-width: 980px; margin: 1.25rem auto 0; padding: 0 1rem; }
+
+/* KPI chips */
+.kpi-chips {
+  display: flex; flex-wrap: wrap; gap: .5rem .6rem;
+  list-style: none; padding: 0; margin: .25rem 0 1rem;
+}
+.kpi-chips li {
+  font-weight: 600; font-size: .95rem; line-height: 1;
+  padding: .5rem .65rem; border: 1px solid #e6e6e6; border-radius: 999px;
+  background: #fafafa;
+}
+
+/* Photos: larger, visible, not over-zoomed */
+.hero-duo {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+  align-items: start; margin-bottom: .75rem;
+}
+.media-card { background: #fff; border-radius: 10px; padding: .5rem; border: 1px solid #efefef; }
+.media-card img {
+  width: 100%;
+  max-height: 360px;              /* show more image area */
+  object-fit: contain;            /* do NOT zoom/crop */
+  background: #111;               /* subtle letterbox for tall images */
+  border-radius: 8px;
+  display: block;
+}
+.media-card figcaption { margin-top: .5rem; font-size: .95rem; color: #444; }
+
+/* Text blocks */
+.centered-title { text-align: center; }
+.impact-why { margin: 1rem auto .25rem; max-width: 70ch; line-height: 1.55; }
+.impact-care-note { margin: .25rem auto 0; max-width: 70ch; color: #666; font-size: .9rem; }
+
+/* Responsive */
+@media (max-width: 800px) {
+  .hero-duo { grid-template-columns: 1fr; }
+  .media-card img { max-height: 300px; }
+}
+
+/* modal-wide hero */
+.media-card.is-hero {
+  width: 100%;
+  max-width: none;      /* override any card cap */
+  margin: 0 auto 1rem;  /* center + spacing */
+}
+
+.media-card.is-hero img {
+  display: block;
+  width: 100%;
+  height: auto;         /* no stretching */
+  object-fit: contain;  /* keep full image visible */
+  max-height: 600px;    /* tune to your modal height */
+}
+
+/* 2x2 Photo Grid styles */
+.gallery-2x2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;                 /* space between boxes */
+}
+
+.gallery-item{
+  aspect-ratio: 4 / 3;       /* uniform box shape; adjust as needed */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111;          /* shows while image loads */
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
+
+.gallery-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* fill box without distortion */
+  display: block;
+}
+
+/* Optional: stack on narrow screens */
+@media (max-width: 640px){
+  .gallery-2x2{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 2-up image row */
+.image-row{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.img-cell{
+  padding: 8px;                 /* optional white frame */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+.img-cell img{
+  width: 100%;
+  height: auto;                 /* keep aspect ratio */
+  display: block;
+  border-radius: 8px;
+}
+
+/* Stack on narrow screens */
+@media (max-width: 640px){
+  .image-row{ grid-template-columns: 1fr; }
+}
+/* Row with bottom alignment */
+.image-row{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: end;            /* <-- bottoms line up */
+}
+
+/* Frame each image */
+.img-cell{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;       /* keep image sitting on the bottom */
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+/* Images scale without distortion */
+.img-cell img{
+  max-width: 100%;
+  height: auto;                /* preserve aspect ratio */
+  display: block;
+}
+
+/* Control relative heights */
+.img-cell.tall  img{ max-height: 440px; }   /* make this one “longer”   */
+.img-cell.short img{ max-height: 320px; }   /* make this one shorter    */
+
+/* Optional: stack on small screens */
+@media (max-width: 640px){
+  .image-row{ grid-template-columns: 1fr; }
+}
+/* Side-by-side, bottoms aligned */
+.image-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  align-items:end;
+}
+
+/* Consistent frame */
+.img-cell{
+  height: 320px;              /* <-- set one height for both */
+  padding:10px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;        /* images sit on the bottom */
+}
+
+/* Scale each image to fit without distortion */
+.img-cell img{
+  width:100%;
+  height:100%;
+  object-fit:contain;          /* <-- shrinks the larger one */
+  display:block;
+}
+
+/* Optional: stack on mobile */
+@media (max-width:640px){
+  .image-row{ grid-template-columns:1fr; }
+}
+
+.bulleted {
+  list-style: disc;
+  padding-left: 1.25rem;   /* indent */
+  margin: 0.5rem 0 0.75rem;
+}
+.bulleted li { 
+  margin-bottom: 0.35rem;  /* spacing between bullets */
+}
