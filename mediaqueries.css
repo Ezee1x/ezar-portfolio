@@ -52,10 +52,19 @@
   footer {
     height: 40vh;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+  #profile{
+  height: auto;
+  min-height: unset;
+  margin-bottom: 0;
+  padding-bottom: 1.25rem; /* small breathing room before About Me */
+}
+.pointer-mark{
+    display: block;              /* show on phone */
+    width: 34px;
+    height: auto;
+    transform: translateX(8px) translateY(2px); /* shift slightly right + tiny down */
   }
+
   article {
     font-size: 1rem;
   }
@@ -101,3 +110,128 @@
     text-align: justify;
   }
 }
+/* === iPhone fixes: hero socials + contact row === */
+@media screen and (max-width: 600px) {
+
+  /* --- HERO SOCIAL ICONS (the two logos under your name) --- */
+  .cta-row{
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .pointer-mark{ 
+    display: none;
+  }
+
+  .socials{
+    transform: none !important;
+    justify-content: center;
+  }
+
+  .socials .icon{
+    width: 30px;
+    height: auto;
+  }
+
+  /* ✅ ADD THIS PART (tighten spacing between text + icons) */
+  .section__text__p1{
+    margin-bottom: 6px;
+  }
+
+  .title{
+    margin: 6px 0 8px;
+    line-height: 1.05;
+  }
+
+  .cta-row{
+    margin-top: 6px;   /* reduces gap above icons row */
+    gap: 10px;         /* reduces gap between text and icons */
+  }
+
+  .cta-row p{
+    margin: 0;         /* removes default <p> spacing */
+  }
+
+  .contact1{
+    margin: 0;
+    line-height: 1;
+    transform: none;   /* prevents weird nudges on mobile */
+  }
+
+  /* --- CONTACT SECTION ICON/TEXT ALIGNMENT --- */
+  .contact-info-upper-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+  }
+
+  .contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    width: min(420px, 92vw);
+    padding: 12px 16px;
+  }
+
+  .contact-info-container p{ margin: 0; }
+
+  .contact-info-container img{
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+
+  .email-icon{ height: 22px; }
+
+  .contact-link{
+    line-height: 1;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .contact-link:hover{ text-decoration: none; }
+
+  /* tighten hero spacing on iPhone */
+.section__text p,
+.section__text h1 {
+  margin: 0 !important;
+}
+
+/* reduce vertical gap between name and the ContactMe+icons row */
+.section__text .title {
+  margin-bottom: 6px !important;
+}
+
+/* control the ContactMe + icons row spacing */
+.cta-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px !important;        /* <- smaller gap between text and icons */
+  margin-top: 4px !important; /* <- pulls row closer to title */
+}
+
+/* make sure the "Contact Me" text has zero extra spacing */
+.cta-row p,
+.cta-row span,
+.cta-row a {
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+/* icons align nicely and don’t “float” */
+.cta-row img,
+.socials img,
+.socials .icon {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+}
+
+
