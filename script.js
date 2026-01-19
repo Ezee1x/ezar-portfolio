@@ -17,6 +17,9 @@ function openModal(selector) {
 }
 
 function closeModal(modal) {
+  modal.querySelectorAll('video').forEach((video) => {
+    video.pause();
+  });
   modal.classList.remove('open');
   document.body.classList.remove('modal-open');
 }
