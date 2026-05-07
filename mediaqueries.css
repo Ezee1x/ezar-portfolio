@@ -1,237 +1,85 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
+/* ===========================
+   MEDIA QUERIES
+   =========================== */
 
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
+  #desktop-nav { display: flex; }
+  #hamburger-nav { display: none; }
+
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 5% 4rem;
   }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
+  .hero-photo-wrap { width: 260px; height: 260px; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile{
-  height: auto;
-  min-height: unset;
-  margin-bottom: 0;
-  padding-bottom: 1.25rem; /* small breathing room before About Me */
-}
-.pointer-mark{
-    display: block;              /* show on phone */
-    width: 34px;
-    height: auto;
-    transform: translateX(8px) translateY(2px); /* shift slightly right + tiny down */
-  }
+@media screen and (max-width: 960px) {
+  #desktop-nav { display: none; }
+  #hamburger-nav { display: flex; }
 
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+  section { padding: 4rem 5%; }
+
+  .hero-content {
+    grid-template-columns: 1fr;
     text-align: center;
+    gap: 2.5rem;
+    padding-top: 5rem;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
+  .hero-photo-col { order: -1; }
+  .hero-photo-wrap { width: 220px; height: 220px; }
+  .hero-bio { max-width: 100%; margin: 0 auto 2rem; }
+  .hero-cta { justify-content: center; }
+  .hero-name { font-size: clamp(3rem, 8vw, 4.5rem); }
+  .scroll-hint { display: none; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-cards { grid-template-columns: 1fr 1fr; }
+  .section-title { margin-bottom: 2rem; }
+
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .hero-duo { grid-template-columns: 1fr; }
+  .media-grid { grid-template-columns: 1fr; }
+  .image-row { grid-template-columns: 1fr; }
+  .gallery-2x2 { grid-template-columns: 1fr; }
+  .spec-grid { grid-template-columns: 1fr; }
+
+  .footer-inner { flex-direction: column; text-align: center; gap: 1.25rem; }
+  .footer-nav { justify-content: center; }
 }
-/* === iPhone fixes: hero socials + contact row === */
+
 @media screen and (max-width: 600px) {
+  :root { --nav-h: 60px; }
 
-  /* --- HERO SOCIAL ICONS (the two logos under your name) --- */
-  .cta-row{
-    justify-content: center;
-    gap: 12px;
-  }
+  section { padding: 3rem 5%; }
 
-  .pointer-mark{ 
-    display: none;
-  }
+  .hero-content { padding-top: 3.5rem; }
+  .hero-photo-wrap { width: 180px; height: 180px; }
+  .hero-name { font-size: 2.8rem; }
+  .hero-stats { gap: 0.6rem; }
+  .stat-pill { padding: 0.4rem 0.75rem; }
+  .stat-num { font-size: 1.3rem; }
 
-  .socials{
-    transform: none !important;
-    justify-content: center;
-  }
+  .projects-grid { grid-template-columns: 1fr; }
+  .about-cards { grid-template-columns: 1fr; }
 
-  .socials .icon{
-    width: 30px;
-    height: auto;
-  }
+  .section-title { font-size: 2rem; }
 
-  /* ✅ ADD THIS PART (tighten spacing between text + icons) */
-  .section__text__p1{
-    margin-bottom: 6px;
-  }
+  .contact-cards { flex-direction: column; align-items: center; }
+  .contact-card { width: min(360px, 100%); }
 
-  .title{
-    margin: 6px 0 8px;
-    line-height: 1.05;
-  }
+  .hero-cta { gap: 0.75rem; }
+  .btn-primary, .btn-secondary { padding: 0.65rem 1.35rem; font-size: 0.85rem; }
 
-  .cta-row{
-    margin-top: 6px;   /* reduces gap above icons row */
-    gap: 10px;         /* reduces gap between text and icons */
-  }
+  .modal__dialog { max-height: 90vh; border-radius: 16px; }
+  .modal__dialog > h2 { font-size: 1.2rem; padding: 1.25rem; }
+  .modal__body { padding: 1.25rem; }
+  .img-cell { height: 200px; }
 
-  .cta-row p{
-    margin: 0;         /* removes default <p> spacing */
-  }
-
-  .contact1{
-    margin: 0;
-    line-height: 1;
-    transform: none;   /* prevents weird nudges on mobile */
-  }
-
-  /* --- CONTACT SECTION ICON/TEXT ALIGNMENT --- */
-  .contact-info-upper-container{
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 14px;
-  }
-
-  .contact-info-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 0;
-    width: min(420px, 92vw);
-    padding: 12px 16px;
-  }
-
-  .contact-info-container p{ margin: 0; }
-
-  .contact-info-container img{
-    display: block;
-    width: 22px;
-    height: 22px;
-  }
-
-  .email-icon{ height: 22px; }
-
-  .contact-link{
-    line-height: 1;
-    font-weight: 600;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .contact-link:hover{ text-decoration: none; }
-
-  /* tighten hero spacing on iPhone */
-.section__text p,
-.section__text h1 {
-  margin: 0 !important;
+  /* cursor off on touch */
+  .cursor-dot, .cursor-ring { display: none; }
+  body { cursor: auto; }
+  a, button { cursor: pointer; }
 }
-
-/* reduce vertical gap between name and the ContactMe+icons row */
-.section__text .title {
-  margin-bottom: 6px !important;
-}
-
-/* control the ContactMe + icons row spacing */
-.cta-row{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px !important;        /* <- smaller gap between text and icons */
-  margin-top: 4px !important; /* <- pulls row closer to title */
-}
-
-/* make sure the "Contact Me" text has zero extra spacing */
-.cta-row p,
-.cta-row span,
-.cta-row a {
-  margin: 0 !important;
-  line-height: 1 !important;
-}
-
-/* icons align nicely and don’t “float” */
-.cta-row img,
-.socials img,
-.socials .icon {
-  display: block;
-  width: 26px;
-  height: 26px;
-}
-
-}
-
-
